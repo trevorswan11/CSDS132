@@ -1,0 +1,9 @@
+Java: Configure Java Runtime to change JDK being Used
+Use JDK 8 for all projects related to this course, this is under Amazon Corretto
+    Oracle's JDK runs is JDK 21 and is far superior, yet it is beyodn the scope of this course
+Everything submitted for this course must be abke to be ran using Java 8
+
+shift + up/down highlights entire line before or after the cursor, respectively
+Ctrl + Del Deletes the previous row if it is empty, moving all text to end of current row if there is text in it
+
+

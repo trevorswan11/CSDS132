@@ -1,0 +1,242 @@
+<!DOCTYPE HTML> 
+<html><head>
+
+<title>CSDS 132: Programming in Java - Lab 4
+</title>
+<style type="text/css">
+ol {list-style-type:lower-alpha}
+h1 {text-align: center}
+</style>
+
+
+</head><body>
+<h1>Programming in Java: Lab 4
+<br>
+Static Methods and Conditionals</h1>
+
+<p>In this lab, you will continue your practice writing methods and classes by
+creating a class that is not a subclass (other than of <tt>Object</tt>),
+writing static methods, and writing conditional statements.</p>
+
+<h2> Task 1.  Assigning Lab Partners</h2>
+
+<p>If you wish to have a lab partner (and you are strongly encouraged to do so), see your lab
+assistant.  You may keep your lab partner from last week, but you do not need to.</p>
+
+<hr>
+
+<h2>Reminder About The Rules For The Lab</h2>
+
+<h3>If You Do Not Have a Lab Partner</h3>
+
+<p>You are to do the tasks listed below.  The tasks require you to write a class that contains
+specific methods.  You need to complete all the methods as described.
+If you fail to complete all the tasks by the end of lab, you may continue to work on them,
+but you must complete the lab prior to the deadline posted.</p>
+
+<h3> If You Have a Lab Partner </h3>
+
+<p>You will play two different roles in the lab.  You will either be the
+<em>driver</em> or <em>navigator</em>.
+</p><ul>
+<li><strong>driver:</strong> The person typing at the keyboard.</li>
+<li><strong>navigator:</strong> The person watching for mistakes, making suggestions,
+                      and thinking ahead.</li>
+</ul>
+
+<em><strong>Important:</strong> The navigator must not touch the keyboard or the mouse.</em>
+If the navigator either types or moves the mouse, the navigator will get a
+zero for the lab.
+
+<p>Choose one of you to begin as the driver.  The other will be the navigator, and the lab will tell you
+when to switch roles.</p>
+
+<p>As in last week's lab, you will write a class that you will submit at the
+end of lab.
+You do not have to complete all the tasks by the end of the lab because you are being graded on how well you
+work as a team.  You do have to make a good effort and work for the entire 50 minute lab to get full credit.</p>
+
+<h3>Submitting the Lab</h3>
+
+<p>At the end of lab, submit your program on the <em>Lab 4</em> assignment on Canvas.  <em>Both you and your lab partner should submit your code.</em>
+Remember that your code is in a file with a <tt>.java</tt> extension, and depending on your browser, the extension may or may not be visible.  <em>Do <strong>not</strong>
+submit the file with the <tt>.class</tt> extension (that is Java bytecode) or the <tt>.java~</tt> extension (that is a temporary editor file).</em></p>
+<hr>
+
+<h3><em>If you are new to programming,</em> your goal is to make it to Step 5 of Task 3 during the lab session.  If you are having trouble with Steps 1 through 4, be sure to
+ask the lab assistant for help so that you have enough time to work on Step 5 and hopefully get to start Task 4.</h3>
+
+<hr>
+
+<h2> Task 2. Introductions and Starting DrJava </h2>
+
+<p>If you have a lab partner, tell your lab partner your name as well your favorite place to go off-campus in Cleveland.</p>
+
+<p>Choose one of you to start as the driver, and launch DrJava.</p>
+
+<hr>
+
+<h2> Task 3. Programming Some Static Methods and Conditional Statements. </h2>
+
+<h4>Step 1</h4>
+  <p>Write a class called <tt>Lab4</tt>.
+  Since <tt>Lab4</tt> is not going to extend another class (other than <tt>Object</tt>), 
+  you begin the class with <br>
+  <pre>public class Lab4 {</pre> <br>
+  Save the class in a file called <tt>Lab4.java</tt>.  </p>
+
+<p><em>Remember to put a comment above the class declaration that includes your name and your lab partner's name.</em></p>
+
+<h4>Step 2</h4>
+  <p>Write the following <tt>public static</tt>
+    method. (Put "public" and "static" before the return type and method
+  name.)  The method should have two inputs, each of type <tt>double</tt>.
+<pre>
+  /** Input two doubles and return the larger of the two doubles. */
+  double maxDouble
+</pre>
+
+Do you remember how to give inputs to a method?
+You will need an conditional statement in the body of the method.  Try to write your method so that the body is just of the form:
+<pre>
+if (<em>do some test</em>) {
+  <em>what you should do if the test passes</em>
+}
+else {
+  <em>what you should do if the test fails</em>
+}
+</pre>
+Compile it, and fix any errors.</p>
+
+<p>Test <tt>Lab4.maxDouble</tt> in the Interactions pane.</p>
+
+<h4>Step 3</h4>
+<p>Add the following method to class <tt>Lab 4</tt>:
+<pre>
+  /** Input three doubles and return the middle value of the three. */
+  double middleValue
+</pre>
+So, if the values entered are 1.5, 0.2, and 9.3, the middle value would be 1.5.
+<em>Hint: You are going to need more than one conditional to complete this task.</em></p>
+
+<p>Compile it and fix and errors.</p>
+
+<p>Test <tt>Lab4.middleValue</tt> in the Interactions pane.</p>
+
+<p><em>Show your <tt>maxDouble</tt> and <tt>middleValue</tt> methods to your
+lab assistant.</em></p>
+
+<h4>Step 4</h4>
+<p><strong>Switch roles:  the navigator should drive and the driver should navigate.</strong></p>
+<p>Add the following method to class <tt>Lab4</tt>:
+<pre>
+  /** Input a double value and return the closest int value.  The int value should be rounded
+    * so that if the fractional value is 0.5 or greater, it rounds up and if it is less than 0.5
+    * it rounds down.
+    */
+  int roundDouble
+</pre>
+You can write this method without using a conditional statement, and using a mathematical operation instead.
+See if you can find the short way to write it.  If not, you may use a conditional statement.
+</p>
+
+
+<h4>Step 5</h4>
+<p>Here is a bigger challenge.
+The method <tt>roundDouble</tt> does what is called "biased rounding" because it always
+rounds 0.5 up.  For "unbiased rounding", if the fraction part is exactly 0.5 it should only be rounded
+up half of the time.  The accepted solution is to always round to the even integer, so 3.5 becomes 4 but
+2.5 becomes 2. 
+Create a method <tt>unbiasedRoundDouble</tt> that does unbiased rounding. <em>Remember to include a comment
+above your method.</em>  This method will require an <tt>if</tt> statement.</p>
+
+<p><em>Show your <tt>roundDouble</tt> and <tt>unbiasedRoundDouble</tt> methods to your
+lab assistant.</em></p>
+
+<hr />
+
+<h2>Optional Task 4. A Complicated Conditional</h2>
+<p><strong>Switch roles:  the navigator should drive and the driver should navigate.</strong></p>
+
+<p>We will end the lab with an even larger challenge.  This routine requires a fairly complicated conditional
+statement(s).  To help you see how to reason through the logic, we will create this one in stages.</p>
+
+<h4>Step 1. Writing down the comment and header</h4>
+<p> Add the following method header, including the comment:
+<pre>
+  /**
+   * Return true of the given date/time is daylight savings.
+   * Daylight savings time begins 2am the second Sunday of March and ends 2am the first Sunday of November.
+   *
+   * @param month - represents the month with 1 = January, 12 = December
+   * @param date - represents the day of the month, between 1 and 31
+   * @param day -  represents the day of the week with 1 = Sunday, 7 = Saturday
+   * @param hour - represents the hour of the day with 0 = midnight, 12 = noon
+   *
+   * Precondition: the month is between 1 and 12, the date is between 1 and 31, the day is between 1 and 7
+   *                and the hour is between 0 and 23.
+   */
+  public static boolean isDayLightSavings(int month, int date, int day, int hour) {
+</pre></p>
+
+<h4>Step 2. Getting rid of the easy cases.</h4>
+<p>When faced with a complicated logical statement, it is often best to do things in pieces.
+First, write an <tt>if</tt> statement that returns <tt>false</tt>
+if the month is January, February, or December, and it returns <tt>true</tt> if the month is April, May,
+June, July, August, September, or October.  You can return either <tt>true</tt> or <tt>false</tt> if the 
+month is March or November.</p>
+
+<p>Put a little thought in it because you can accomplish this with both a very long and a rather short
+<tt>if</tt> statement.</p>
+
+<p><strong>Important:  Test your code.</strong>  Call <tt>Lab4.isDayLightSavings(...)</tt> with different values for the month
+from 1 to 12 and make sure it returns the correct value.  If it does not, fix your code.
+<em>Hint:  Use the up arrow on the interactions pane to avoid lots of typing.</em></p>
+
+<h4> Step 3. Handle one of the tricky cases </h4>
+
+<p><strong>Switch roles:  the navigator should drive and the driver should navigate.</strong></p>
+
+<p>Now add an additional part to your conditional statement to handle the month of November.
+(I suggest making a test to see if the month is November, and make your <em>then-statement</em> a
+compound statement to handle all the possibilities for that month.) </p>
+
+<p>First, try to tell from the <tt>day</tt> and <tt>date</tt> parameters if this is the first Sunday of the
+month.  If it is, the method should return <tt>true</tt> if the hour is less than 2 and <tt>false</tt> if
+the hour is 2 or greater.</p>
+
+<p>Second, modify your <tt>if</tt> statement so that if the day/date combination falls before the first 
+Sunday, your method returns <tt>true</tt>, and if it falls after the first Sunday, the method returns
+<tt>false</tt>. <em>Take a little time thinking about this part.  You may be able to figure out a short mathematical way to test this.</em></p>
+
+<p><strong>Important:  Test your code.</strong>  First rerun the tests you did in the previous step for the 
+different months (except for March and November) to make sure the code
+still works correctly.  Then, test Sunday for dates 1 through 14 and hours 1 and 2 to make sure it
+recognizes the first Sunday from other Sundays and that it switches answers at hour 2.  Finally, test non-Sunday
+days and various dates to make sure it recognizes day/date combinations that fall before the first Sunday and those that do not.</strong></p>
+
+<p><em>When you finish, show your code to your lab instructor.  Because there are lots of ways to do this, be
+prepared to explain why the logic you did is correct.</em></p>
+
+
+<h4> Step 4. Handle the other tricky case </h4>
+<p><strong>Switch roles:  the navigator should drive and the driver should navigate.</strong></p>
+
+<p>Now try adding the cases for March.  The code will be very similar to the code for November, but there will
+need to be some adjustment because you now need to deal with the change happening on the second Sunday instead
+of the first.  In particular, make sure your code distinguishes the second Sunday from the first and later Sundays, and it can tell if a day/date combination falls before the second Sunday.</p>
+
+<hr>
+
+<h2>Task 5. Finishing Up</h2>
+
+<p>Both you and your lab partner should submit the <tt>Lab4.java</tt> file.
+Please do that now.</p>
+
+<p><em>Be certain to submit the file named
+<tt>Lab4.java</tt> and not the one named <tt>Lab4.java~</tt> nor the one named <tt>Lab4.class</tt>.
+</p> 
+
+<p>You should also email or copy the <tt>Lab4.java</tt> file for yourself and your lab partner so that you can easily reference this file.</p>
+</body>
+</html>

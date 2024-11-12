@@ -1,0 +1,16 @@
+Welcome to DrJava.  Working directory is C:\Users\Trevor\OneDrive\Documents\CWRU\Spring 2024\CSDS132\Labs
+> int x
+> x = 20
+20
+> double y
+> y = x
+20.0
+> y = y/8
+2.5
+> x = (int)y
+2
+> x
+2
+> y
+2.5
+> 

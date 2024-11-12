@@ -1,0 +1,17 @@
+Part 1
+> import javax.swing.JFrame
+> JFrame frame1
+> frame1 = new JFrame();
+> frame1.setVisible(true);
+> frame1.setSize(300,200);
+
+Part 2
+> XFrame frame2 = new XFrame();
+> frame2.setVisible(true)
+> frame2.setSize(400,600)
+
+Part 3
+> XFrame frame2 = new XFrame();
+> frame2.times2(2)
+4
+> 

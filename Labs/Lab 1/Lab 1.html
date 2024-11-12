@@ -1,0 +1,338 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+<title>CSDS 132: Programming in Java - Lab 1
+</title>
+<style type="text/css">
+ol ol {list-style-type:lower-alpha}
+h1 {text-align: center}
+</style>
+
+
+</head>
+
+<body>
+<h1>Programming in Java: Lab 1
+<br>
+Primitive Types <br>
+Getting Comfortable with DrJava </h1>
+
+
+<p>The purpose of this lab is to get you used to using DrJava, to start experimenting with Java expressions,
+and to understand some of the issues involved in representing and manipulating data with a computer.  </p>
+
+<hr>
+
+<h2>Task 1: Getting a Lab Partner</h2>
+
+<p>The first thing that will occur in this lab is the assigning of lab partners.
+The teaching assistants in the recitation will pair you with another student.  If there is a person you want to 
+work with, let the teaching assistants know.
+</p>
+
+
+<hr>
+
+<h2>Rules For The Lab</h2>
+
+<blockquote>
+<p><strong>Your grade will be determined by how well you work as a member of a team.</strong>
+You will play two different roles in the lab.  You will either be the
+<em>driver</em> or <em>navigator</em>.
+<ul>
+<li><strong>driver:</strong> The person typing at the keyboard.</li>
+<li><strong>navigator:</strong> The person watching for mistakes, making suggestions,
+                      and thinking ahead.</li>
+</ul>
+
+<em><strong>Important: The driver is the only one who may do the typing or otherwise edit the document or enter the code.
+The navigator must not jump in and start editing.</strong></em>
+</p>
+
+<p>Choose one of you to begin as the driver.  The other will be the navigator, and the lab will tell you
+when to switch roles.</p>
+
+<p><em>You do not have to complete all the tasks
+by the end of lab</em>, but you do have to make a good effort.<br> 
+<strong>The only ways to lose points when working as a team is 1) you do not show up on time, 
+2) you goof off,
+3) you are the navigator and you take over editing the document from the driver, or 
+4) you are the navigatpr and you sit quietly and never offer suggestions.</strong>
+</p>
+</blockquote>
+
+<p><strong>If you are unable to attend the recitation</strong> then you must do this lab exercise on your own.
+In that case, your grade will be the percent of the exercises you complete.</p>
+<hr>
+
+<h2>Task 2: Introductions</h2>
+
+<p>If you have a lab partner, tell your partner your name as well as your favorite snack food.</p>
+
+<hr>
+
+<h2>Task 3: Starting DrJava</h2>
+
+<p><em>DrJava</em> is what is known as an <em>integrated development environment</em>
+(or IDE for short) for Java.  An IDE is an application that assists programmers
+in writing computer programs.  There are a large number of IDEs available
+for many different languages, and we will be using DrJava for writing 
+Java in our class because DrJava is particularly good for new programmers.</p>
+
+<p>DrJava is available on Case's MyApps (myapps.case.edu).  Log in with your Case ID and password,
+launch the "student desktop" and choose DrJava from the applications list.</p>
+
+<p>You are allowed to use a different IDE <em>if both you and your lab partner want to</em> and the IDE should have JShell installed,
+but these labs exercises are designed for DrJava.  If either you or your lab partner is a coding novice, then you should use DrJava.
+<strong>Do not pressure your lab partner into using a different IDE.</strong></p>
+
+<h3> Testing DrJava </h3>
+
+<p>All programming languages have their own quirks with how they manipulate numbers and other data.  In this lab, you will
+begin exploring the syntactic form of Java expressions as well as their semantic meaning.</p>
+
+<p>
+In this lab, you will be entering code fragments in the Interactions Pane
+of DrJava.  At the bottom of the DrJava window, you should see several tabs.
+Click on the one that is labeled <em>Interactions</em>.  You should see
+<pre>
+Welcome to DrJava.
+&gt;
+</pre>
+You will enter the code fragments at the <tt>&gt;</tt> prompt.
+</p>
+<p>Try it now.  Type:
+<pre>1+2</pre>
+at the <tt>&gt;</tt> prompt and press the <em>Enter</em> key.  The interactions pane should respond with
+<pre>3</pre></p>
+
+<p>The Interactions Pane is the reason DrJava is a very nice IDE for
+beginning programmers.  You can enter pieces of Java code into the 
+Interactions Pane in order to test the code and see what happens.  This way,
+you can get started working in Java without having to write an entire Java
+program. </p>
+
+<p><em>If you are not using DrJava, you can get the same effect by using JShell in your IDE, but you need to be using Java 9 or greater.</em></p>
+
+
+<hr />
+<h2>Task 4: Questions and Answers</h2>
+<p>You will be writing a <em>lab report</em> in this lab.  I recommend using the editor window of DrJava to type in your answers and to save them as a .txt file.  Alternatively, you can open a google doc shared with your lab partner.</p>
+<p>Place both of your names into the document.</p>
+
+<p>
+Follow the following procedure through the lab.
+<ol>
+<li> Look over the lines you are asked to type into the interactions pane.  Discuss with your lab partner
+what you think the results should be.</li>
+<li>Type the expressions <em>one at a time</em> into the Interactions Pane of DrJava and see what happens. (If you try to copy and paste all of them at once, you will get a Java error.)</li>
+<li>Discuss the results with your lab partner, read the questions that follow and see if you can answer them.
+If you are unsure, you can enter more test cases into the interactions pane.</li>
+<li>Write your answers or explanations to the following questions in the lab report document.</li>
+</ol>
+</p>
+
+<h3>If you are new to Java your goal is to get through question 6 below.  If you have previously coded in Java, try to get through question 8.</h3>
+
+<p><strong>At the end of lab</strong>, both you and your partner will submit the report.  If you click on the <em>Lab 1</em> link on Canvas
+to find the form for submitting the lab.</p>
+
+<p>The questions below cover some features of numbers in Java.  Don't worry
+about trying to remember all the syntax.  We will be covering this
+in more detail later.  Right now, just focus on the <em>behavior</em> of the
+different Java expressions below. </p>
+
+<p><strong>Remember, only the driver is to type either in DrJava or on the lab report.  The navigator is to think
+and offer suggestions.</strong></p>
+
+<OL>
+
+<LI><p>What is the result of each of the following expressions when you type them in the interactions pane?
+<PRE>
+5 * 2
+2 + 20 * 10
+(2 - 20) * 10
+</PRE>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>What is the meaning of <tt>+</tt>, <tt>-</tt>, and <tt>*</tt>?</li>
+    <li>If your have a mixture of <tt>+</tt>, <tt>*</tt>, and <tt>-</tt> operators in an expression, what is the 
+rule Java uses to evaluate the expression?</li></ol>
+</p></li>
+
+</LI>
+
+<li><p>What is the result of each of the following expressions when you type them in the interactions pane?
+<pre>
+5 - 2
+5 - 2.0
+6.0 - 5
+6.0 - 5.0
+</pre>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>What is the <em>type</em> of each of the resulting values?  
+What is the rule Java uses to determine what <em>type</em> the resulting value is?</li>
+</ol></p>
+
+</li>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong></p>
+
+<li><p>What is the result of each of the following expressions when you type them in the interactions pane?
+<pre>
+11 / 5
+11.0 / 5.0
+11 % 5
+12 % 5
+4 / 5 * 10.0
+</pre>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>What is the meaning of the <tt>/</tt> and <tt>%</tt> operators?</li>
+    <li>What is the rule for <tt>/</tt> if the operands have decimal points (<tt>double</tt>) and if they do not (<tt>int</tt>)?</tt>
+    <li>Why did the last expression evaluate to 0.0?</li>
+</ol>
+</p>
+
+<p><em>Note: Because of the possibly confusing results when mixing int and double values, we try to avoid doing
+so when we write programs.</em></p></li>
+
+
+<LI><p>What is the result of the following expressions when you type them in the interactions pane?
+<pre>
+2147483647 + 1
+Integer.MAX_VALUE
+Integer.MAX_VALUE + 1
+Integer.MAX_VALUE + 2
+Integer.MIN_VALUE
+Integer.MIN_VALUE - 1
+</PRE>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>Explain the behavior witnessed above.  Can you come up with rules for very positive or very negative <tt>int/Integer</tt> type numbers?</li></ol>
+</p></li>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong></p>
+
+<li><p>What is the result of the following expressions when you type them in the interactions pane?
+<pre>
+Double.MAX_VALUE
+Double.MAX_VALUE + 10
+Double.MAX_VALUE / 10
+Double.MAX_VALUE * 10
+Double.MIN_VALUE
+Double.MIN_VALUE * 10
+Double.MIN_VALUE / 10
+</pre>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>Can you come up with rules for very large or very small <tt>double</tt> type numbers?</li></ol>
+</p>  </li>
+
+<li><p>What is the result of the following expressions when you type them in the interactions pane?
+<pre>
+4 &lt; 5
+5.01 &gt; 5.00
+6 &gt; 5 &gt; 4
+2 == 2
+2 == 3
+</pre>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>What do <tt>&lt;</tt> and <tt>&gt;</tt> do?</li>
+    <li>What does <tt>==</tt> do?</li>
+    <li>Why did one of the above expressions give an error message? (Hint: the answer has to do with a <em>data type</em>.)</li>
+</ol>
+<em>Once you complete this question, show the answer to your lab teaching assistant.</em>
+</p>
+
+<p><strong>Note: <tt>true</tt> and <tt>false</tt> are also values of a primitive type.  They are the only two values
+of the type <tt>boolean</tt>.</strong></p>
+</li>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong></p>
+
+<li><p>What is the result of the following expressions when you type them in the interactions pane?
+<pre>
+(int)5.3
+(int)5.9
+(double)4
+(int)2.5 + 2.5
+</pre>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.
+Write up your answers on your lab report.
+<ol><li>What is the difference between <tt>int</tt> and <tt>double</tt>?</li>
+    <li>What does placing <tt>(int)</tt> to the left of a value do to the value?  What does placing
+<tt>(double)</tt> to the left of a value do to the value?</li>
+<li>Why did the last example still give a double value (a number with a decimal point)?</li>
+</ol>
+<em>Note: <tt>int</tt> and <tt>double</tt> are called <strong>types</strong> and <tt>(int)</tt> and
+<tt>(double)</tt> are called <strong>typecasts</strong>.</em>
+</p></li>
+
+<li><p>What is the result of the following expressions when you type them in the interactions pane?
+(Note that the symbol used is the single-quote, known in English as the apostrophe.)
+<pre>
+'a'
+'a' + 1
+(char)('a' + 1)
+3 == 3
+'3' == '3'
+3 == '3'
+</pre>
+Answer the following quesitons.  You many enter more test cases, if you need, to determine the correct answers.  
+Write up your answers in your lab report.
+<ol>
+<li>What does the single-quote do?</li>
+<li>Why did <tt>'a' + 1</tt> and (char)('a' + 1) behave differently?</li>
+<li>Describe, as best you can, what <tt>'3'</tt> and <tt>3</tt> represent in Java.</li>
+</ol>
+<em>Note: <tt>char</tt> is also a <strong>type</strong> of Java, similar to <tt>int</tt> and <tt>double</tt>.</em>
+</p></li>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong></p>
+
+<li><p>What is the result of the following expressions when you type them in the interactions pane?
+<pre>
+int x
+int y
+x = 10
+y = x * 2
+x
+y
+x = x + 1
+x
+y
+x = 2.0
+x = (int)2.0
+x
+</pre>
+Answer the following questions.  You may enter more test cases, if you need, to determine the correct answers.  
+Write up your answers on your lab report.
+<ol>
+<li>What does the <tt>=</tt> operator do?</li>
+<li>In your own words, explain the behavior of the line <tt>x = x + 1</tt>.</li>
+<li>Why, after the line <tt>x = x + 1</tt> did the value of <tt>x</tt> change but not the value of <tt>y</tt>?</li>
+<li>Why did the third to last line cause an error?</li>
+</ol>
+</p>
+
+<p><strong><em>Important:</em> remember the difference between <tt>=</tt> and <tt>==</tt>.</strong>
+
+</li>
+</ol>
+
+
+
+<hr>
+
+<h2>Task 5: Submitting Your Report</h2>
+
+<p>Make certain both lab partners' names are on the report, save it, and <em>both</em> lab 
+partners should submit it through Canvas. 
+</p>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>CSDS 132: Programming Project 1</title>
+</head>
+
+<body>
+<h2>Programming Project 1</h2>
+<h3>Due Friday, February 16 at 11:59pm</h3>
+
+
+<p><em><strong>IMPORTANT:</strong> Read the 
+<strong>Do's and Dont's</strong>
+in the <strong>Course Honor Policy</strong> found on blackboard. </em>
+</p>
+
+<h3>I. Overview</h3>
+
+<p>The theme of this assignment is to write code to create an account for a student at a university.
+The purpose is to give you practice writing classes, fields, methods, conditional statements, and
+constructors.  You will also be introduced to polymorphism.</p>
+
+<hr>
+
+<h3>II. Code Readability (20% of your project grade)</h3>
+
+<p>Once upon a time, getting a program to work was the only goal of programming.  That was
+before computers took over the world.  Now, with highly complex software running much of our lives,
+the industry has learned that computer code is a written document that must be able to communicate
+to other humans what the code is doing.  If the program is too hard for a human to quickly understand,
+the company does not want it.</p> 
+
+<p>Most companies enforce readable code by having very strict rules about how the program should look.
+This class will do the same, but will not be quite as strict so you can have some freedom for developing
+your own style.</p>
+
+<p><strong>To receive the full readability marks, your code must follow the following guideline:</strong>
+<ul>
+<li>All variables (fields, parameters, local variables) must be given appropriate and descriptive names.</li>
+<li>All variable and method names must start with a lowercase letter.  All class names must start with an uppercase letter.</li>
+<li>The class body should be organized so that all the fields are at the top of the file, the 
+constructors are next, and then the rest of the methods.</li>
+<li>There should not be two statements on the same line.</li>
+<li>All code must be properly indented (see page 689 of the Lewis book for an example of good style).
+    The amount of indentation is up to you, but it should be at least 2 spaces, and it must be used
+    consistently throughout the code.</li>
+<li>You must be consistent in your use of {, }.  The closing } must be on its own line and indented
+the same amount as the line containing the opening {.</li>
+<li>There must be an empty line between each method.</li>
+<li>There must be a space separating each operator from its operands as well as a space after each comma.</li>
+<li>There must be a comment at the top of the file that includes both your name and a description of what the class represents.</li>
+<li>There must be a comment directly above each method that, in one or two lines, states <em>what</em>
+task the method is doing, not how it is doing it.  Do not directly copy the homework instructions.</li>
+<li>There must be a comment directly above each field that, in one line, states what the field is storing.</li>
+<li>There must be a comment either above or to the right of each non-field variable indicating what the variable is storing.  Any comments placed to the right should be aligned so they start on the same column.</li>
+</ul>
+</p>
+
+<hr>
+
+<h3>III. Program Testing Document (20% of your project grade)</h3>
+
+<p>Once upon a time, companies thought errors in code were only a minor inconvenience.
+That was before software glitches started killing people and destroying companies.
+Now, standard practice is that all code must be thoroughly verified before a company is willing to release it.
+At a large number of firms, programmers are required to <em>first</em> design the test cases the 
+program must pass and <em>then</em> start writing the code.  We will not be that strict in this 
+class, but you will need to test your code.</p>
+
+<p><strong>To receive full testing marks, you must write a testing report that shows that you thoroughly
+tested every method of the program.</strong>  The report should be a short English description for each
+test (what you are testing and what the expected result of the test is) followd by the 
+actual result of the test.  If you are using DrJava, you can enter the test into the interactions pane
+and then copy and paste the test code plus the result to your report.  If you fail to complete
+the program, your report should indicate how you would go about testing the incomplete methods.</p>
+
+<p><strong>Your grade on the testing report is how thoroughly you test your code, not how correctly
+your code runs.</strong>  If your code is not 100% correct then your report <em>should</em> show
+an incorrect result to some test.  Testing methods that do not have conditional statements should
+be pretty straightforward, but you need to put thought into testing methods with conditional
+statements so that each branch of the if-statement is tested.</p>
+
+<p><em>Hint 1</em>: You can test multiple methods with one test.  For example, you can test 
+each setter/getter method pair together or you can test constructors and getter methods together.</p>
+
+<p><strong><em>Hint 2: Do not put off testing to the end!</em></strong>  Test each method after you complete it.
+Many methods depend on other methods.  Delaying testing could mean cascading errors that cause your
+whole project to collapse.  Since you need to test anyway, copy the tests you do into a document, and
+you are most of the way to completing your report.</p>
+
+<p>If you are not using DrJava, you are allowed (but not required) create a separate class that tests your program.
+You must still write a testing report that documents the tests you do in this class.  Do not
+place testing code into a main method of the classes below.  That is not the purpose
+of a main method.</p>
+
+<hr>
+
+<h3>IV. Java Programming (55% of your grade)</h3>
+
+<p><strong>Guidelines for the program</strong>:
+<ul>
+<li>All the listed methods must be public.</li>
+<li>You will need to create several instance fields to store data, and every field must be private.</li>
+<li>All fields must be initialized to an appropriate value.  They can be initialized either as part
+if the field declaration or in the constructor.  Even if you feel that the default value provided by Java
+is appropriate, you still must give an explicit initialization.</li>
+<li>Any method whose name begins with <tt>set</tt> should only assign a value to an appropriately
+named field.  The method should do no other processing.  Any processing described in a <tt>set</tt>
+method description below is for information only.  That actual processing will be done by other methods.
+</li>
+<li>Any method whose name begins with <tt>get</tt> should only return the appropriate value.
+No other processing should occur in these methods.</li>
+<li>Your class must include only the methods listed.  You may not write any other methods.</li>
+<li>The behavior of your methods must match the descriptions below.</li>
+<li>You should not write any loops in your program (though loops are allowed in the testing code).</li>
+</ul>
+</p>
+
+<p><strong>The program:</strong> You will create the following four classes.  The classes are listed in order of challenge from
+more straightforward to more challenging.</p>
+<ol><li><p><tt>Account</tt><br>
+The <tt>Account</tt> represents a general purpose account that records the amount of money an individual owes.
+The <tt>Account</tt> class will need instance fields to keep track of an account number,
+the current balance for the account, and a balance limit for the account.  The class will have the
+following methods:
+<ol type="a">
+  <li><tt>getAccountNumber</tt><br> Takes no input and returns a <tt>String</tt>.
+      Returns the account number of the account.  (The account number will never change.)</li>
+  <li><strong><tt>setBalance</tt></strong><br> Takes a single <tt>double</tt> value as input and returns nothing. 
+	  Changes the balance to be the input value.
+  <li><tt>getBalance</tt><br> Takes no input and returns a <tt>double</tt>.
+      Returns the current balance of the account.</li>
+  <li><tt>charge</tt><br> Takes a single <tt>double</tt> value as input and returns nothing.
+      The balance is increased by the input amount.</li>
+  <li><tt>credit</tt><br> Takes a single <tt>double</tt> value as input and returns nothing.
+      The balance is decreased by the input amount.</li>
+  <li><tt>setBalanceLimit</tt><br> Takes a single <tt>int</tt> value as input and returns nothing.
+      Changes the balance limit to be the input value.</li>
+  <li><tt>getBalanceLimit</tt><br> Takes no input and returns an <tt>int</tt>.
+      Returns the balance limit of the account.</li>
+</ol></p>
+<p>The <tt>Account</tt> class will have two constructors:
+<ul>
+<li>The first constructor takes a single <tt>String</tt> input
+that is the account number.</li>
+<li>The second constructor takes two inputs, a <tt>String</tt> that is the account number and an <tt>int</tt> that is the balance limit.</li>
+</ul>
+</p></li>
+
+<li><p><tt>LibraryAccount</tt><br>
+A <tt>LibraryAccount</tt> is the financial record of a library patron.  It records whether the 
+patron has any overdue material and how much money, in fines, has been assessed to the patron.
+The <tt>LibraryAccount</tt> class should <em>extend</em> the <tt>Account</tt> class.  Besides 
+including all the methods that <tt>Account</tt> has, the <tt>LibraryAccount</tt> will have the
+following additional methods:
+<ol type="a">
+  <li><tt>setBookFine</tt><br> Takes a single <tt>double</tt> value as input and returns nothing.
+    The input value will be the size of the fine that is assessed each day a book is overdue.</li>
+  <li><tt>getBookFine</tt><br> Takes no input and returns a <tt>double</tt>.
+    Returns the amount that will be fined for each day a book is overdue.</li>
+  <li><tt>setReserveFine</tt><br> Takes a single <tt>double</tt> value as input and returns nothing.
+    The input value will be the size of the fine that is assessed each day a reserved item is overdue.</li>
+  <li><tt>getReserveFine</tt><br> Takes no input and returns a <tt>double</tt>.
+    Returns the amount that will be fined for each day a reserved item is overdue.</li>
+  <li><tt>incrementOverdueBooks</tt><br> Takes no input and returns nothing.
+    Increases by one the number of overdue books on the account.</li>
+  <li><tt>decrementOverdueBooks</tt><br> Takes no input and returns nothing.
+    Decreases by one the number of overdue books on the account.  Does not decrease the count
+     below zero.</li>
+  <li><strong><tt>setNumberOverdueBooks</tt></strong><br> Takes a single <tt>int</tt> value as input and returns nothing. 
+     Changes the number of overdue books to be the input value.
+  <li><tt>getNumberOverdueBooks</tt><br> Takes no input and returns an <tt>int</tt>.
+    Returns the number of overdue books on the account.</li>
+  <li><tt>incrementOverdueReserve</tt><br> Takes no input and returns nothing.
+    Increases by one the number of overdue reserved items on the account.</li>
+  <li><tt>decrementOverdueReserve</tt><br> Takes no input and returns nothing.
+    Decreases by one the number of overdue reserved items on the account.  Does not decrease the count
+     below zero.</li>
+  <li><strong><tt>setNumberOverdueReserve</tt></strong><br> Takes a single <tt>int</tt> value as input and returns nothing. 
+	 Changes the number of overdue reserves to be the input value. 
+  <li><tt>getNumberOverdueReserve</tt><br> Takes no input and returns an <tt>int</tt>.
+    Returns the number of overdue reserved items on the account.</li>
+  <li><tt>canBorrow</tt><br> Takes no input and returns a <tt>boolean</tt>.
+    Returns <tt>true</tt> if the account's balance is equal or less than the account's balance limit.
+    Returns <tt>false</tt> otherwise.</li>
+  <li><tt>endOfDay</tt><br> Takes no input and returns nothing.
+    Increases the account's balance by the product of the number of overdue books and the book fine,
+    and increases the account's balance by the product of the number of overdue reserved items and
+    the reserved items fine.</li>
+</ol>
+</p>
+<p>The <tt>LibraryAccount</tt> should have two constructors.
+<ul>
+  <li>the first constructor takes a single <tt>String</tt> input that is the account number.</li>
+  <li>the second constructor takes four inputs: a <tt>String</tt> that is the account number,
+      an <tt>int</tt> that is the balance limit, a <tt>double</tt> that is the book fine, and a
+      <tt>double</tt> that is the reserved items fine.</li>
+</ul>
+</p></li>
+
+<li><p><tt>CreditAccount</tt><br>
+The <tt>CreditAccount</tt> class represents a situation where a customer can borrow money.  The money is to be
+repaid at the end of the month, but if it is not repaid, an interest penalty is assessed.
+The <tt>CreditAccount</tt> class should <em>extend</em> the <tt>Account</tt> class.  Besides
+including all the methods that <tt>Account</tt> has, the <tt>CreditAccount</tt> class will have the
+following additional methods:
+<ol type="a">
+  <li><tt>setInterestRate</tt><br>Takes a single <tt>double</tt> value as input and returns nothing.
+    Changes the interest rate for the account to the input value.</li>
+  <li><tt>getInterestRate</tt><br>Takes no input and returns a <tt>double</tt>.
+    Returns the interest rate for the account.</li>
+  <li><strong><tt>setMonthlyPayment</tt></strong><br> Takes a single <tt>double</tt> as input and returns nothing. 
+	Changes the monthly payment for the account to the input value.
+  <li><tt>getMonthlyPayment</tt><br>Takes no input and returns a <tt>double</tt>.
+    Returns the monthly payment amount.  The montly payment is the amount that must be paid this month
+    to avoid receiving an interest charge on the account balance.  The monthly payment is different from
+    the balance.</li>
+	<li><strong><tt>setAmountPaidThisMonth</tt></strong><br> Takes a single <tt>double</tt> value as input and returns nothing. 
+	Changes the amount paid this month for the account to the input value. </li>
+  <li><tt>getAmountPaidThisMonth</tt><br>Takes no input and returns a <tt>double</tt>.
+    Returns the amount that has been credited to the account this month.</li>
+  <li><tt>endOfMonth</tt><br> Takes no input and returns nothing.
+    First, the method should see if interest must be charged.
+    If the amount paid this month is less than the monthly payment, the account's balance is increased
+    by product of the interest rate and the balance, divided by 12.<br>&nbsp;
+    After checking for an interst charge, the method should reset the account by setting the 
+     monthly payment to be equal to the balance and setting the amount paid this month to zero.</li>
+</ol>
+</p>
+<p>
+Besides these methods, the <tt>CreditAccount</tt> class needs a different behavior for the <tt>credit</tt>
+method from that of the <tt>Account</tt> class.
+<ul><li>The <tt>credit</tt> method in <tt>CreditAccount</tt> must <strong>decrease</strong> the account balance and <strong>increse</strong> the amount paid this month by
+the input value.</li></ul>
+</p><p>
+The <tt>CreditAccount</tt> should have a single constructor that takes 2 inputs: a <tt>String</tt> that is the
+account number and a <tt>double</tt> that is the interest rate.
+</p></li>
+
+<li><p><tt>StudentAccount</tt><br>
+The <tt>StudentAccount</tt> class represents the financial accounts of a student.  A student's account is divided into three parts: the amount they owe for tuition,
+the amount they owe for any dining charges, and the amount owed to the library for overdue items.
+the <tt>StudentAccount</tt> class should <em>extend</em> the <tt>Account</tt> class.  Besudes 
+incuding all the methods that <tt>Account</tt> has, the <tt>StudentAccount</tt> class will have the
+following additional methods:
+<ol type="a">
+  <li><tt>setName</tt><br>Takes a single input that is a <tt>String</tt> value and returns nothing.
+   Changes the account owner's name to the input value.</li>
+  <li><tt>getName</tt><br>Takes no input and returns a <tt>String</tt> value.
+   Returns the account owner's name.</li>
+  <li><tt>setAddress</tt><br>Takes a single input that is a <tt>String</tt> value and returns nothing.
+   Changes the account owner's address to the input value.</li>
+  <li><tt>getAddress</tt><br>Takes no input and returns a <tt>String</tt> value.
+   Returns the account owner's address.</li>
+  <li><tt>setLibraryAccount</tt><br>Takes a single input that is a <tt>LibraryAccount</tt> value and returns nothing.
+   Changes the library account associated with this account to the input value.
+   There does not have to be a library account associated with this account so the input value
+   may be <tt>null</tt>.</li>
+  <li><tt>getLibraryAccount</tt><br>Takes no input and returns a <tt>LibraryAccount</tt> value.
+   Returns the library account associated with this account.</li>
+  <li><tt>setTuitionAccount</tt><br>Takes a single input that is a <tt>CreditAccount</tt> value and returns nothing.
+   Changes the tuition account associated with this account to the input value.
+   There does not have to be a tuition account associated with this account so the input value
+   may be <tt>null</tt>.</li>
+  <li><tt>getTuitionAccount</tt><br>Takes no input and returns a <tt>CreditAccount</tt> value.
+   Returns the tuition account associated with this account.</li>
+  <li><tt>setDiningAccount</tt><br>Takes a single input that is a <tt>CreditAccount</tt> value and returns nothing.
+   Changes the dining account associated with this account to the input value.
+   There does not have to be a dining account associated with this account so the input value
+   may be <tt>null</tt>.</li>
+  <li><tt>getDiningAccount</tt><br>Takes no input and returns a <tt>CreditAccount</tt> value.
+   Returns the dining account associated with this account.</li>
+</ol>
+</p><p>
+Besides these methods, the <tt>StudentAccount</tt> class needs to a different behavior for the following
+methods of <tt>Account</tt>:
+<ul>
+  <li><tt>getBalance</tt>: the <tt>getBalance</tt> method of <tt>StudentAccount</tt> should sum the
+    balances of the library account, tuition account, and dining account that are associated with this 
+    account (if those accounts exist).
+The method should then subtract the account's refund amount <strong>(represented by the balance of the student account itself)</strong> from this sum and return that value.</li>
+  <li><tt>charge</tt>: the <tt>charge</tt> method of <tt>StudentAccount</tt> should
+     first subtract the input amount by the accounts's refund amount. If this difference is positive
+     and the tuition account exists, the tuition account's balance should be increased by the
+     difference.  Otherwise, the account's refund amount should be set to the negation of this
+     difference.</li>
+  <li><tt>credit:</tt> the <tt>credit</tt> method of <tt>StudentAccount</tt> processes a payment to the
+student account, and the payment should be used to decrease the balances of the associated accounts
+in the following order: tuition, dining, library (if they exist).  That is, you first apply the 
+payment to reduce the tuition account balance.  If there is any money left after reducing the tuition
+account, you reduce the dining account balance next and then the library account balance.
+If after reducing each existing account there is money left over, it should
+be added to the student account's refund amount.  The total amount you apply to the associated accounts'
+balances should not exceed the input to this method.<br>&nbsp;
+  For the tuition and dining accounts, the account's balance should only be decreased until the account's
+amount paid this month equals the monthly payment.<br>&nbsp;
+For the library account, the account's balance should not be reduced below zero.
+</li>
+</ul>
+</p><p>
+In addition, the <tt>StudentAccount</tt> should have a single constructor that takes two <tt>String</tt>
+values as input. The first is the account number and the second is the account owner's name.</p></li>
+</ol>
+
+<hr>
+
+<h3>V. Submitting Your Project</h3>
+<p>Submit the <tt>.java</tt> files (not the <tt>.class</tt> files or the <tt>.java~</tt> files) for each
+of your four classes plus the testing report on Canvas.</p>
+
+</body>
+</html>
