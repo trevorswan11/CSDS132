@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------
+Test set: projectFour.SlideGameTest
+-------------------------------------------------------------------------------
+Tests run: 21, Failures: 0, Errors: 21, Skipped: 0, Time elapsed: 0.216 s <<< FAILURE! - in projectFour.SlideGameTest
+setPositionTest(projectFour.SlideGameTest)  Time elapsed: 0.013 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+flipHorizontalTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+transposeTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+gameBoardTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+slideLeftTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+flipVerticalTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+slideRightTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+randomIndexTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeRowRightTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeDownTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeRowLeftTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeUpTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeBottomRightTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeTopLeftTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+copyBoardTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeBottomLeftTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+mergeTopRightTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+diagonalExtractorTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+boardDimTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+parseArgsTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+
+diagonalReconstructorTest(projectFour.SlideGameTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.RuntimeException: Internal graphics not initialized yet
+	at projectFour.SlideGameTest.<init>(SlideGameTest.java:34)
+

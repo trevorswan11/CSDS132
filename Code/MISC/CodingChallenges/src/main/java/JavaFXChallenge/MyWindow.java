@@ -15,6 +15,7 @@ public class MyWindow extends Application {
     private Button buttonTwo;
     private Button buttonThree;
     private Button buttonFour;
+    private int touchCounter = 0;
 
     // Starts the application
     public void start(Stage primaryStage) {
@@ -32,10 +33,8 @@ public class MyWindow extends Application {
         buttonFour.setOnAction(handler);
         buttonTwo.setOnAction(new EventHandler<ActionEvent>() {
             // A field to store the amount of presses
-            private int numPressed = 0;
-
             public void handle(ActionEvent e) {
-                buttonTwo.setText("click count: " + (numPressed += 1));
+                buttonTwo.setText("click count: " + (touchCounter += 1));
             }
         });
 
@@ -61,6 +60,7 @@ public class MyWindow extends Application {
                 System.out.println("You clicked the right button!");
             } else if (call == buttonFour) {
                 buttonTwo.setText("click count: 0");
+                touchCounter = 0;
                 statusButton.setStyle("-fx-background-color: green");
             }
         }
